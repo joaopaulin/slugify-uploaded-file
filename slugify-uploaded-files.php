@@ -10,8 +10,8 @@ Author URI:  http://joaopaulin.com.br
 
 function slugify_uploaded_files( $filename, $filename_raw ) {
 
-	$info 	= pathinfo($filename);
-	$ext  	= empty($info['extension']) ? '' : '.' . $info['extension'];
+	$info 	= pathinfo( $filename );
+	$ext  	= empty( $info['extension'] ) ? '' : '.' . $info['extension'];
 	$new 	= sanitize_title( $info['filename'] ) . $ext;
 
 	if ( $new != $filename_raw ) {
